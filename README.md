@@ -6,3 +6,5 @@ Here, we provide an analysis pipeline for the best combinatorial treatment selec
 3. Conduct permutation test of overall treatment efficacy (i.e., sharp null hypothesis testing);
 4. Determine patient stratification strategy with identified effect modifiers in a data-driven manner;
 5. Perform multiple comparisons with the best to select the best drug combination strategy within each subgroup.
+
+# Functions
