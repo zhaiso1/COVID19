@@ -7,7 +7,7 @@ Here, we provide an analysis pipeline for the best combinatorial treatment selec
 4. Determine patient stratification strategy with identified effect modifiers in a data-driven manner;
 5. Perform multiple comparisons with the best to select the best drug combination strategy within each subgroup.
 
-# Usage
+# Usage and Workflow
 ## Step 1: Data description
 The original data include: Y (treatment failure or recurrence status), DRUG (combinatorial drug categories), X1 (feature, e.g., age), X2 (feature, e.g., BMI), X3 (feature, e.g., disease severity) ...
 ## Step 2: Missing indicator method
@@ -18,5 +18,5 @@ Perform `VMM` function (in **virtual_multiple_matching.R**) to adjust for possib
 Select top features with the largest prognostic value (i.e., candidate effect modifiers) through variable importance ranking from `randomForest` in Step 3. Then further select effect modifiers from candidate ones based on point estimate of treatment failure rate.
 ## Step 5: Sharp null hypothesis testing
 Perform `sharp.null.test` function (in **sharp_null_test.R**) to test if there exists an overall treatment efficacy.
-## Step 5: Multiple Comparisons with the best
+## Step 6: Multiple Comparisons with the best
 Perform `MCB` function (in **multiple_comparison_with_best.R**) in the whole dataset, as well as in different patient subgroups stratified by selected effect modifiers in Step 4, to select the best drug combination strategy.
